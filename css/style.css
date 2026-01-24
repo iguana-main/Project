@@ -1,66 +1,100 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-size: 10px;
+}
+
+section {
+  min-height: 100vh;
+}
+
 .page-header {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  position: relative;
   height: 100vh;
   background-color: red;
 }
 .page-header h1 {
   font-size: 3.2rem;
 }
+@media screen and (min-width: 1324px) {
+  .page-header {
+    flex-direction: row;
+  }
+}
 
-.header-content-1, .header-content-2 {
-  width: 50%;
-  height: 100%;
+.header-section {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.header-content-1 {
+  height: 100%;
+  width: 100%;
   background-color: blue;
+}
+.header-section h1 {
+  text-align: right;
+}
+.header-section img {
+  margin-top: 7rem;
+  border-radius: 5px;
+  width: 50%;
+}
+@media screen and (min-width: 1124px) {
+  .header-section {
+    width: 45%;
+  }
 }
 
 .page-nav {
   background-color: green;
   height: 8%;
-  width: 85%;
+  width: 100%;
   position: fixed;
   top: 0;
   z-index: 2;
-  margin-top: 5px;
-  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+@media screen and (min-width: 1324px) {
+  .page-nav {
+    width: 85%;
+    margin-inline: 7.5%;
+    margin-top: 0.5rem;
+    border-radius: 5px;
+  }
+}
 .page-nav .logo {
   text-align: left;
 }
-.page-nav ul {
-  display: flex;
-  justify-content: space-evenly;
-  list-style: none;
-  font-size: 2.5rem;
-}
-.page-nav a {
-  font-size: 1.5rem;
-  padding: 10px;
-  margin: 10px;
+.page-nav .logo a {
   text-decoration: none;
-  border: 1px solid black;
-  border-radius: 50%;
-  height: 80px;
-  width: 80px;
+  color: black;
+  font-size: 2.5rem;
+  text-transform: capitalize;
+  letter-spacing: 2px;
 }
-.page-nav a:nth-last-child(1) {
-  width: 150px;
-  background-color: red;
+.page-nav .logo, .page-nav .menu {
+  padding: 10px;
+  flex-basis: 50%;
 }
-
-body {
-  margin: 0;
-  font-size: 10px;
+.page-nav .menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page-nav .menu span {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 2.3rem;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */

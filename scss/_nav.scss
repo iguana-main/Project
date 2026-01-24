@@ -1,0 +1,50 @@
+@use '_mixins.scss' as *;
+
+.page-nav {
+    background-color: green;
+    height: 8%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include mq('xl'){
+        width: 85%;
+        margin-inline: 7.5%;
+        margin-top: .5rem;
+        border-radius: 5px;
+    }
+
+    .logo{
+        text-align: left;
+        a{
+            text-decoration: none;
+            color: black;
+            font-size: 2.5rem;
+            text-transform: capitalize;
+            letter-spacing: 2px;           
+        }
+    }
+
+    .logo, .menu{
+        padding: 10px;
+        flex-basis: 50%;
+    }
+
+
+    .menu{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        span{
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            font-size: 2.3rem;
+            cursor: pointer;
+        }    
+    }
+}
