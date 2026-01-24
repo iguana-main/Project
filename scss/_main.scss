@@ -7,6 +7,12 @@ body{
     font-size: 10px;
 }
 
-section{
+
+main, section{
     min-height: 100vh;
+}
+
+
+*, ::before, ::after {
+  box-sizing: border-box;
 }
