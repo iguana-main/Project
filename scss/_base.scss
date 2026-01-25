@@ -3,12 +3,17 @@
 html {
     scroll-behavior: smooth;
     font-family: "Kanit", sans-serif;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar {
+    display: none;
 }
 
 body {
     margin: 0;
     font-size: 10px;
-    background: linear-gradient(195deg, $color-navy-dark, $color-navy);
 }
 
 section {
@@ -16,7 +21,7 @@ section {
 }
 
 .shell {
-    width: min(100% - 2.5rem, 1200px);
+    width: min(100% - 2.5rem, 1450px);
     margin-inline: auto;
 }
 

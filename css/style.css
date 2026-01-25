@@ -1,40 +1,39 @@
+header {
+  background: linear-gradient(35deg, #1d4352, #22403D);
+}
+
 .hero__header {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   position: relative;
-  min-height: 100vh;
-}
-.hero__header h1 {
-  font-size: 3.2rem;
-  flex-basis: 50%;
+  min-height: 95.5vh;
 }
 .hero__header h1,
 .hero__header p {
-  color: #A6A29F;
+  color: #ecebeb;
 }
 
 .hero__section {
   display: grid;
   align-items: center;
   grid-template-columns: repeat(1, minmax(0, 1fr));
-  gap: clamp(3rem, 6vw, 7rem);
+  gap: 10rem;
 }
 @media screen and (min-width: 1124px) {
   .hero__section {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
-.hero__section h1 {
-  text-align: left;
-}
 
 .hero__text {
-  padding: 2rem;
+  padding: 3rem;
 }
 .hero__text h1 {
-  font-size: 3.8rem;
+  font-size: 3.4rem;
+  font-weight: 600;
   text-align: center;
+  letter-spacing: 1px;
 }
 @media screen and (min-width: 1124px) {
   .hero__text h1 {
@@ -49,29 +48,28 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 1.5rem;
-  border: 2px solid rgba(255, 255, 255, 0.3);
+  text-align: left;
   height: 15%;
   width: 100%;
   padding: 1rem;
 }
 .hero__button a {
-  color: inherit;
-  background-color: #F27A5E;
+  color: #ecebeb;
+  background-color: rgba(255, 255, 255, 0.1);
   font-weight: 500;
   padding: 1rem;
   text-decoration: none;
-  border-radius: 1.5rem;
+  border-radius: 2.5rem;
   border: 2px solid rgba(255, 255, 255, 0.1);
   text-align: center;
-  height: 70%;
+  height: 50%;
   width: 45%;
   font-size: 1.5rem;
   cursor: pointer;
 }
 .hero__button a:nth-last-child(1) {
-  background-color: #732922;
+  color: #0f2026;
+  background-color: #F27A5E;
 }
 
 .hero__image {
@@ -81,8 +79,7 @@
 }
 .hero__image img {
   box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.4);
-  height: 80%;
-  width: 95%;
+  width: 85%;
   border-radius: 1.5rem;
 }
 
@@ -114,7 +111,6 @@
   justify-content: center;
   box-shadow: 0px 2px 2px 0px rgba(30, 42, 56, 0.08);
   position: fixed;
-  color: #22403D;
 }
 @media screen and (min-width: 1324px) {
   .hero__nav {
@@ -128,65 +124,89 @@
   text-align: left;
 }
 .hero__nav .logo a {
-  color: #22403D;
+  color: #0f2026;
   text-decoration: none;
   font-size: 2.5rem;
   text-transform: uppercase;
   font-weight: bold;
   letter-spacing: 2px;
+  padding-left: 5%;
 }
-.hero__nav .logo,
-.hero__nav .menu {
+
+.logo,
+.menu {
   padding: 10px;
   flex-basis: 50%;
 }
-.hero__nav .menu ul {
+
+.hero__nav-small {
+  height: 7%;
+  margin-top: 0;
+}
+
+.menu span {
+  align-items: center;
+}
+.menu ul {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  padding: 2rem;
+  list-style: none;
+  gap: 0.9rem;
+  padding: 0;
+  margin-right: 5%;
 }
-.hero__nav .menu li {
-  display: inline;
-}
-.hero__nav .menu a {
+.menu ul a {
   font-size: 1.5rem;
-  margin: 1rem;
   padding: 1rem;
   text-decoration: none;
-  color: black;
+  color: #0f2026;
 }
-.hero__nav .menu .socials a {
-  font-size: 1.5rem;
-  height: 100px;
-  width: 100px;
-  border-radius: 50%;
-  background-color: rgb(255, 255, 255);
-  color: black;
+.menu li {
+  display: inline;
 }
-
-.menu {
-  display: flex;
+.menu .socials_circle {
+  display: inline-flex;
   justify-content: center;
   align-items: center;
+  font-size: 2rem;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  margin: 1rem;
 }
-.menu span {
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  font-size: 2.3rem;
-  cursor: pointer;
+.menu .socials_contact {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  height: 60px;
+  width: 120px;
+  border-radius: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: #0f2026;
+  font-weight: 600;
+  margin: 1rem;
+  padding: 1rem;
 }
 
 html {
   scroll-behavior: smooth;
   font-family: "Kanit", sans-serif;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar {
+  display: none;
 }
 
 body {
   margin: 0;
   font-size: 10px;
-  background: linear-gradient(195deg, #0f2026, #22403D);
 }
 
 section {
@@ -194,7 +214,7 @@ section {
 }
 
 .shell {
-  width: min(100% - 2.5rem, 1200px);
+  width: min(100% - 2.5rem, 1450px);
   margin-inline: auto;
 }
 
