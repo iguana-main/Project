@@ -147,6 +147,17 @@ header {
 .menu span {
   align-items: center;
 }
+.menu .links {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu .links a {
+  font-size: 1.5rem;
+  padding: 1rem;
+  text-decoration: none;
+  color: #0f2026;
+}
 .menu ul {
   display: flex;
   justify-content: space-evenly;
@@ -156,14 +167,13 @@ header {
   padding: 0;
   margin-right: 5%;
 }
-.menu ul a {
-  font-size: 1.5rem;
-  padding: 1rem;
-  text-decoration: none;
-  color: #0f2026;
-}
 .menu li {
   display: inline;
+}
+.menu .social-links {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 }
 .menu .socials_circle {
   display: inline-flex;
@@ -176,6 +186,10 @@ header {
   background-color: rgba(255, 255, 255, 0.1);
   border: 2px solid rgba(255, 255, 255, 0.3);
   margin: 1rem;
+  font-size: 1.5rem;
+  padding: 1rem;
+  text-decoration: none;
+  color: #0f2026;
 }
 .menu .socials_contact {
   display: inline-flex;
@@ -191,6 +205,9 @@ header {
   font-weight: 600;
   margin: 1rem;
   padding: 1rem;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #0f2026;
 }
 
 html {

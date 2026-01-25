@@ -85,14 +85,10 @@
         align-items: center;
     }
 
-    ul {
-        display: flex;
-        justify-content: space-evenly;
+    .links {
+        display: inline-flex;
+        justify-content: center;
         align-items: center;
-        list-style: none;
-        gap: 0.9rem;
-        padding: 0;
-        margin-right: 5%;
 
         a {
             font-size: 1.5rem;
@@ -102,8 +98,27 @@
         }
     }
 
+    ul {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        list-style: none;
+        gap: 0.9rem;
+        padding: 0;
+        margin-right: 5%;
+
+
+    }
+
     li {
         display: inline;
+    }
+
+    // I am thou, thou art I...
+    .social-links{
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .socials_circle {
@@ -117,7 +132,10 @@
         background-color: rgba(255, 255, 255, 0.1);
         border: 2px solid rgba(255, 255, 255, 0.3);
         margin: 1rem;
-
+        font-size: 1.5rem;
+        padding: 1rem;
+        text-decoration: none;
+        color: $color-navy-dark;
     }
 
     .socials_contact {
@@ -134,6 +152,9 @@
         font-weight: 600;
         margin: 1rem;
         padding: 1rem;
+        font-size: 1.5rem;
+        text-decoration: none;
+        color: $color-navy-dark;
 
     }
 
