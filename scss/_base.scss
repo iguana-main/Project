@@ -1,0 +1,27 @@
+@use '_variables.scss' as *;
+
+html {
+    scroll-behavior: smooth;
+    font-family: "Kanit", sans-serif;
+}
+
+body {
+    margin: 0;
+    font-size: 10px;
+    background: linear-gradient(195deg, $color-navy-dark, $color-navy);
+}
+
+section {
+    min-height: 80vh;
+}
+
+.shell {
+    width: min(100% - 2.5rem, 1200px);
+    margin-inline: auto;
+}
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
