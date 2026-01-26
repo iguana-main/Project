@@ -15,6 +15,7 @@ header {
 }
 
 .hero__section {
+  margin: 4rem;
   display: grid;
   align-items: center;
   grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -23,6 +24,7 @@ header {
 @media screen and (min-width: 1124px) {
   .hero__section {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin: 1rem;
   }
 }
 
@@ -30,14 +32,14 @@ header {
   padding: 3rem;
 }
 .hero__text h1 {
-  font-size: 3.4rem;
+  font-size: 2rem;
   font-weight: 600;
-  text-align: center;
   letter-spacing: 1px;
+  text-align: left;
 }
-@media screen and (min-width: 1124px) {
+@media screen and (min-width: 1324px) {
   .hero__text h1 {
-    text-align: left;
+    font-size: 3.4rem;
   }
 }
 .hero__text p {
@@ -47,23 +49,28 @@ header {
 .hero__button {
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
-  text-align: left;
+  align-items: left;
+  flex-direction: column;
   height: 15%;
   width: 100%;
   padding: 1rem;
+}
+@media screen and (min-width: 1324px) {
+  .hero__button {
+    flex-direction: row;
+  }
 }
 .hero__button a {
   color: #ecebeb;
   background-color: rgba(255, 255, 255, 0.1);
   font-weight: 500;
   padding: 1rem;
+  margin: 1rem;
+  width: 45%;
   text-decoration: none;
   border-radius: 2.5rem;
   border: 2px solid rgba(255, 255, 255, 0.1);
   text-align: center;
-  height: 50%;
-  width: 45%;
   font-size: 1.5rem;
   cursor: pointer;
 }
@@ -102,14 +109,14 @@ header {
 
 .hero__nav {
   background-color: #F27A5E;
-  height: 8%;
-  width: 100%;
   top: 0;
   z-index: 2;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.4);
   display: flex;
   align-items: center;
-  justify-content: center;
-  box-shadow: 0px 2px 2px 0px rgba(30, 42, 56, 0.08);
+  justify-content: space-between;
+  height: 8%;
+  width: 100%;
   position: fixed;
 }
 @media screen and (min-width: 1324px) {
@@ -121,7 +128,8 @@ header {
   }
 }
 .hero__nav .logo {
-  text-align: left;
+  justify-content: left;
+  align-items: left;
 }
 .hero__nav .logo a {
   color: #0f2026;
@@ -135,8 +143,10 @@ header {
 
 .logo,
 .menu {
-  padding: 10px;
-  flex-basis: 50%;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero__nav-small {
@@ -144,70 +154,93 @@ header {
   margin-top: 0;
 }
 
-.menu span {
-  align-items: center;
-}
-.menu .links {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-}
-.menu .links a {
-  font-size: 1.5rem;
-  padding: 1rem;
-  text-decoration: none;
-  color: #0f2026;
-}
-.menu ul {
+.navMenu {
   display: flex;
-  justify-content: space-evenly;
   align-items: center;
-  list-style: none;
-  gap: 0.9rem;
-  padding: 0;
-  margin-right: 5%;
+  gap: 1.25rem;
+}
+
+.menu .menu-bar {
+  text-align: left;
+  position: absolute;
+  right: 1.5%;
+  bottom: 20%;
+  font-size: 2.3rem;
+  cursor: pointer;
+}
+@media screen and (min-width: 1124px) {
+  .menu .menu-bar {
+    display: none;
+  }
 }
 .menu li {
   display: inline;
 }
-.menu .social-links {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
+.menu ul {
+  display: none;
 }
-.menu .socials_circle {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2rem;
-  height: 60px;
-  width: 60px;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  margin: 1rem;
-  font-size: 1.5rem;
-  padding: 1rem;
-  text-decoration: none;
-  color: #0f2026;
-}
-.menu .socials_contact {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2rem;
-  height: 60px;
-  width: 120px;
-  border-radius: 1.5rem;
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  color: #0f2026;
-  font-weight: 500;
-  margin: 1rem;
-  padding: 1rem;
-  font-size: 1.5rem;
-  text-decoration: none;
-  color: #0f2026;
+@media screen and (min-width: 1124px) {
+  .menu ul {
+    display: block;
+  }
+  .menu ul .links {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .menu ul .links a {
+    font-size: 1.5rem;
+    padding: 1.2rem;
+    text-decoration: none;
+    color: #0f2026;
+  }
+  .menu ul ul {
+    display: block;
+    list-style-type: none;
+    gap: 0.9rem;
+    margin-right: 5%;
+  }
+  .menu ul li {
+    list-style-type: none;
+  }
+  .menu ul .social-links {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .menu ul .socials_circle {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    margin: 1rem;
+    font-size: 1.5rem;
+    padding: 1rem;
+    text-decoration: none;
+    color: #0f2026;
+  }
+  .menu ul .socials_contact {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    height: 60px;
+    width: 140px;
+    border-radius: 4.5rem;
+    background-color: #1d4352;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    font-weight: 500;
+    margin: 1rem;
+    padding: 1rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #cec9c6;
+  }
 }
 
 html {
@@ -219,6 +252,12 @@ html {
 
 html::-webkit-scrollbar {
   display: none;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: clamp(3rem, 6vw, 5rem);
 }
 
 body {

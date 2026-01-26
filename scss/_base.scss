@@ -11,6 +11,12 @@ html::-webkit-scrollbar {
     display: none;
 }
 
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: clamp(3rem, 6vw, 5rem);
+}
+
 body {
     margin: 0;
     font-size: 10px;

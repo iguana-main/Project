@@ -3,15 +3,9 @@
 
 .hero__nav {
     background-color: $color-terracotta;
-    height: 8%;
-    width: 100%;
     top: 0;
     z-index: 2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0px 2px 2px 0px $color-navy-alpha3;
-    position: fixed;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.4);
 
     @include mq('xl') {
         width: 90%;
@@ -21,7 +15,8 @@
     }
 
     .logo {
-        text-align: left;
+        justify-content: left;
+        align-items: left;
 
         a {
             color: $color-navy-dark;
@@ -34,13 +29,22 @@
         }
     }
 
-
+    // padding-block: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 8%;
+    width: 100%;
+    position: fixed;
+    // box-shadow: 0 15px 20px rgba(5, 5, 5, 0.55), 0 0 30px rgba(223, 231, 108, 0.15);
 }
 
 .logo,
 .menu {
-    padding: 10px;
-    flex-basis: 50%;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .hero__nav-small {
@@ -48,120 +52,102 @@
     margin-top: 0;
 }
 
+.navMenu {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
 
 .menu {
+    .menu-bar {
+        text-align: left;
+        position: absolute;
+        right: 1.5%;
+        bottom: 20%;
+        font-size: 2.3rem;
+        cursor: pointer;
 
-    // ul {
-    //     display: flex;
-    //     justify-content: space-evenly;
-    //     align-items: center;
-    //     padding: 2rem;
-    //     margin-right: 5%;
-    // }
-
-    // li {
-    //     display: inline;
-    // }
-
-    // a {
-    //     font-size: 1.5rem;
-    //     margin: 1rem;
-    //     padding: 1rem;
-    //     text-decoration: none;
-    //     color: black;
-    // }
-
-    // .socials_circle {
-    //     font-size: 1.5rem;
-    //     height: 42px;
-    //     width: 42px;
-    //     border-radius: 50%;
-    //     background-color: rgba(255, 255, 255, 0.1);
-    //     border: 2px solid rgba(255, 255, 255, 0.3);
-    //     color: black;
-    // }
-
-    span {
-        align-items: center;
-    }
-
-    .links {
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-
-        a {
-            font-size: 1.5rem;
-            padding: 1rem;
-            text-decoration: none;
-            color: $color-navy-dark;
+        @include mq('l') {
+            display: none;
         }
-    }
-
-    ul {
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        list-style: none;
-        gap: 0.9rem;
-        padding: 0;
-        margin-right: 5%;
-
-
     }
 
     li {
         display: inline;
     }
 
-    // I am thou, thou art I...
-    .social-links{
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
+    ul {
+        display: none;
+
+        @include mq('l') {
+            display: block;
+
+            .links {
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+
+                a {
+                    font-size: 1.5rem;
+                    padding: 1.2rem;
+                    text-decoration: none;
+                    color: $color-navy-dark;
+                }
+            }
+
+            ul {
+                display: block;
+                list-style-type: none;
+                gap: 0.9rem;
+                margin-right: 5%;
+            }
+
+            li {
+                list-style-type: none;
+            }
+
+            // I am thou, thou art I...
+            .social-links {
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .socials_circle {
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 2rem;
+                height: 60px;
+                width: 60px;
+                border-radius: 50%;
+                background-color: rgba(255, 255, 255, 0.1);
+                border: 2px solid rgba(255, 255, 255, 0.3);
+                margin: 1rem;
+                font-size: 1.5rem;
+                padding: 1rem;
+                text-decoration: none;
+                color: $color-navy-dark;
+            }
+
+            .socials_contact {
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 2rem;
+                height: 60px;
+                width: 140px;
+                border-radius: 4.5rem;
+                background-color: $color-navy-2;
+                border: 1px solid rgba(255, 255, 255, 0.3);
+                font-weight: 500;
+                margin: 1rem;
+                padding: 1rem;
+                font-size: 1.5rem;
+                text-decoration: none;
+                color: $color-gray-2;
+            }
+        }
     }
 
-    .socials_circle {
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 2rem;
-        height: 60px;
-        width: 60px;
-        border-radius: 50%;
-        background-color: rgba(255, 255, 255, 0.1);
-        border: 2px solid rgba(255, 255, 255, 0.3);
-        margin: 1rem;
-        font-size: 1.5rem;
-        padding: 1rem;
-        text-decoration: none;
-        color: $color-navy-dark;
-    }
-
-    .socials_contact {
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 2rem;
-        height: 60px;
-        width: 120px;
-        border-radius: 1.5rem;
-        background-color: rgba(255, 255, 255, 0.1);
-        border: 2px solid rgba(255, 255, 255, 0.3);
-        color: $color-navy-dark;
-        font-weight: 500;
-        margin: 1rem;
-        padding: 1rem;
-        font-size: 1.5rem;
-        text-decoration: none;
-        color: $color-navy-dark;
-    }
-
-    // span {
-    //     position: absolute;
-    //     right: 1.5%;
-    //     top: 20px;
-    //     font-size: 2.3rem;
-    //     cursor: pointer;
-    // }
 }
