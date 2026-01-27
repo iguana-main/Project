@@ -15,11 +15,9 @@ header {
 }
 
 .hero__section {
-  margin: 4rem;
   display: grid;
   align-items: center;
   grid-template-columns: repeat(1, minmax(0, 1fr));
-  gap: 10rem;
 }
 @media screen and (min-width: 1124px) {
   .hero__section {
@@ -29,7 +27,16 @@ header {
 }
 
 .hero__text {
-  padding: 3rem;
+  padding: 1rem;
+  position: relative;
+  top: 5%;
+  margin: 1rem;
+}
+@media screen and (min-width: 1124px) {
+  .hero__text {
+    padding: 2rem;
+    margin: 0;
+  }
 }
 .hero__text h1 {
   font-size: 2rem;
@@ -37,22 +44,29 @@ header {
   letter-spacing: 1px;
   text-align: left;
 }
+@media screen and (min-width: 1124px) {
+  .hero__text h1 {
+    font-size: 2.6rem;
+  }
+}
 @media screen and (min-width: 1324px) {
   .hero__text h1 {
     font-size: 3.2rem;
   }
 }
 .hero__text p {
-  font-size: clamp(1rem, 4.5vw, 1.3rem);
+  font-size: 1.2rem;
 }
 
 .hero__button {
   display: flex;
-  justify-content: space-evenly;
-  align-items: left;
-  height: 15%;
-  width: 100%;
-  padding: 1rem;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+@media screen and (min-width: 1124px) {
+  .hero__button {
+    flex-direction: row;
+  }
 }
 .hero__button a {
   color: #ecebeb;
@@ -60,7 +74,6 @@ header {
   font-weight: 500;
   padding: 1rem;
   margin: 1rem;
-  width: 45%;
   text-decoration: none;
   border-radius: 2.5rem;
   border: 2px solid rgba(255, 255, 255, 0.1);
@@ -77,28 +90,12 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 1rem;
 }
 .hero__image img {
   box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.4);
-  width: 90%;
+  width: 85%;
   border-radius: 1.5rem;
-}
-
-.hero__imgText {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  left: 16%;
-  bottom: 29%;
-  height: 8%;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 2px solid rgba(255, 255, 255, 0.3);
-  padding: 1rem;
-}
-.hero__imgText p {
-  font-size: 1.5rem;
-  color: black;
 }
 
 .hero__nav {
@@ -109,7 +106,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 8%;
+  height: 7.5%;
   width: 100%;
   position: fixed;
 }
@@ -151,14 +148,13 @@ header {
 .navMenu {
   display: flex;
   align-items: center;
-  gap: 1.25rem;
 }
 
 .menu .menu-bar {
   text-align: left;
   position: absolute;
-  right: 1.5%;
-  bottom: 20%;
+  right: 15px;
+  bottom: 12px;
   font-size: 2.3rem;
   cursor: pointer;
 }
@@ -166,9 +162,6 @@ header {
   .menu .menu-bar {
     display: none;
   }
-}
-.menu li {
-  display: inline;
 }
 .menu ul {
   display: none;
@@ -207,27 +200,28 @@ header {
     justify-content: center;
     align-items: center;
     font-size: 2rem;
-    height: 60px;
-    width: 60px;
+    height: 55px;
+    width: 55px;
     border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.1);
+    background: linear-gradient(200deg, #22403D, #1d4352);
     border: 2px solid rgba(255, 255, 255, 0.3);
     margin: 1rem;
     font-size: 1.5rem;
     padding: 1rem;
     text-decoration: none;
-    color: #0f2026;
+    color: #ecebeb;
   }
   .menu ul .socials_contact {
     display: inline-flex;
     justify-content: center;
     align-items: center;
     font-size: 2rem;
-    height: 60px;
+    height: 55px;
     width: 140px;
     border-radius: 4.5rem;
-    background-color: #1d4352;
-    border: 0.5px solid rgba(255, 255, 255, 0.1);
+    background: linear-gradient(200deg, #22403D, #1d4352);
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 0.5px solid rgba(255, 255, 255, 0.3);
     font-weight: 500;
     margin: 1rem;
     padding: 1rem;
@@ -246,12 +240,6 @@ html {
 
 html::-webkit-scrollbar {
   display: none;
-}
-
-.hero {
-  position: relative;
-  overflow: hidden;
-  padding-bottom: clamp(3rem, 6vw, 5rem);
 }
 
 body {

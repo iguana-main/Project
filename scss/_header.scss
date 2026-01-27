@@ -20,11 +20,10 @@ header {
 }
 
 .hero__section {
-    margin: 4rem;
+    // margin: 1.5rem;
     display: grid;
     align-items: center;
     grid-template-columns: repeat(1, minmax(0, 1fr));
-    gap: 10rem;
 
     @include mq('l') {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -33,34 +32,45 @@ header {
 }
 
 .hero__text {
-    padding: 3rem;
+    padding: 1rem;
+    position: relative;
+    top: 5%;
+    margin: 1rem;
+
+    @include mq('l') {
+        padding: 2rem;
+        margin: 0;
+    }
+
     h1 {
         font-size: 2rem;
-        @include mq ('xl'){
+
+        @include mq ('l') {
+            font-size: 2.6rem;
+        }
+
+        @include mq ('xl') {
             font-size: 3.2rem;
         }
+
         font-weight: 600;
         letter-spacing: 1px;
         text-align: left;
     }
 
     p {
-        font-size: clamp(1rem, 4.5vw, 1.3rem);
+        font-size: 1.2rem;
     }
 
 }
 
 .hero__button {
     display: flex;
-    justify-content: space-evenly;
-    align-items: left;
-    // background-color: yellow;
-    // background-color: rgba(255, 255, 255, 0.1);
-    // border-radius: 1.5rem;
-    // border: 2px solid rgba(255, 255, 255, 0.3);
-    height: 15%;
-    width: 100%;
-    padding: 1rem;
+    flex-wrap: wrap;
+    flex-direction: column;
+    @include mq('l'){
+        flex-direction: row;
+    }
 
     a {
         color: $color-white;
@@ -68,7 +78,7 @@ header {
         font-weight: 500;
         padding: 1rem;
         margin: 1rem;
-        width: 45%;
+        // width: 40%;
         text-decoration: none;
         border-radius: 2.5rem;
         border: 2px solid rgba(255, 255, 255, 0.1);
@@ -87,31 +97,13 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 1rem;
 
     img {
         box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.4);
-        // height: 50%;
-        width: 90%;
+        width: 85%;
         border-radius: 1.5rem;
     }
 
 }
 
-.hero__imgText {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    left: 16%;
-    bottom: 29%;
-    height: 8%;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 2px solid rgba(255, 255, 255, 0.3);
-    padding: 1rem;
-
-
-    p {
-        font-size: 1.5rem;
-        color: black;
-    }
-}
