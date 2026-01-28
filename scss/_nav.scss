@@ -52,6 +52,13 @@
 .navMenu {
     display: flex;
     align-items: center;
+
+    span{
+        font-size: 2rem;
+        @include mq('l'){
+            display: none;
+        }
+    }
 }
 
 .menu {
@@ -113,6 +120,11 @@
                 height: 55px;
                 width: 140px;
                 border-radius: 4.5rem;
+                font-weight: 500;
+            }
+
+            svg{
+                color: $color-white;
             }
         }
     }
