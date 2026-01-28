@@ -1,0 +1,25 @@
+@use '_base.scss' as *;
+@use '_variables.scss' as *;
+@use '_mixins.scss' as *;
+
+.hero__footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    @include mq('l') {
+        flex-direction: row;
+    }
+
+    min-height: 30vh;
+    background-color: $color-navy-dark;
+    padding: 1rem;
+
+    p {
+        font-size: 0.9rem;
+        padding: 1rem;
+        color: $color-white;
+    }
+}
