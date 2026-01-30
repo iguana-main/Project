@@ -69,7 +69,8 @@ header {
     flex-wrap: wrap;
     flex-direction: column;
     gap: 1.5rem;
-    @include mq('l'){
+
+    @include mq('l') {
         flex-direction: row;
     }
 
@@ -86,6 +87,11 @@ header {
         text-align: center;
         font-size: 1.5rem;
         cursor: pointer;
+
+        @include mq('l') {
+            width: 30%;
+            gap: 1.5rem;
+        }
     }
 
     a:nth-last-child(1) {
@@ -102,16 +108,15 @@ header {
     top: 0.5rem;
     padding: 1rem;
 
-    @include mq('l'){
+    @include mq('l') {
         top: 0;
     }
 
     img {
-        box-shadow: 0 15px 20px rgba(5, 5, 5, 0.55), 0 0 30px rgba(223, 231, 108, 0.15);
-        width: 80%;
+        box-shadow: 0 20px 25px 0px rgba(5, 5, 5, 0.55), 0 0 30px rgba(223, 231, 108, 0.15);
         border-radius: 1.5rem;
-        
+        height: 50%;
+        width: 80%;
     }
 
 }
-
