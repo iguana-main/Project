@@ -1,0 +1,15 @@
+@use '_variables.scss' as *;
+@use '_mixins.scss' as *;
+@use '_base.scss' as *;
+
+.cv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.smth{
+    background-color: yellow;
+    height: 60%;
+}

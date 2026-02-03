@@ -16,14 +16,19 @@ body {
     font-size: 10px;
 }
 
+main{
+//    background: linear-gradient(35deg, $color-navy-2, $color-navy);
+}
+
 section {
     min-height: 100vh;
-    // background-color: $color-darkpale-red;
-    
-    &:nth-last-child(odd){
-         background: linear-gradient(35deg, $color-navy-2, $color-navy);
+    &:nth-of-type(even){
+        background-color: $color-gray;
     }
 
+    &:nth-of-type(odd){
+        background-color: $color-navy;
+    }
 }
 
 .shell {

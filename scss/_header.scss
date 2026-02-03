@@ -3,6 +3,10 @@
 
 header {
     background: linear-gradient(35deg, $color-navy-2, $color-navy);
+    padding: 2.5rem;
+    @include mq ('l'){
+        padding: 0;
+    }
 }
 
 .hero__header {
