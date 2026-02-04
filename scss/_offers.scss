@@ -1,17 +1,25 @@
 @use '_base.scss' as *;
 @use '_variables.scss' as *;
+@use '_mixins.scss' as *;
 
 .offers {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
 }
 
 .abtText3 {
-    background-color: green;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.4);
     gap: 1rem;
     color: $color-white;
     border-radius: 1.5rem;
+    width: 45%;
+    position: relative;
+    top: 1rem;
 
     h3 {
         text-align: center;
@@ -51,7 +59,21 @@
     }
 }
 
-img {
-    // height: 50%;
-    width: 30%;
+.hero__offerImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100%;
+
+    @include mq('l') {
+        top: 0;
+    }
+
+    img {
+        box-shadow: 0 20px 25px 0px rgba(5, 5, 5, 0.55), 0 0 30px rgba(223, 231, 108, 0.15);
+        border-radius: 1.5rem;
+        width: 80%;
+    }
+
 }
